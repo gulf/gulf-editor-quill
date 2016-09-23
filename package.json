@@ -1,0 +1,29 @@
+{
+  "name": "gulf-quill",
+  "version": "4.0.0",
+  "description": "Convenient gulf bindings for quillJS (using shareaJS's rich text OT type)",
+  "main": "index.js",
+  "dependencies": {},
+  "peerDependencies": {
+    "gulf": "4.x",
+    "rich-text": "3.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcelklehr/gulf-quill.git"
+  },
+  "keywords": [
+    "operational transformation",
+    "ot",
+    "quill",
+    "quillJS",
+    "rich text",
+    "rtf"
+  ],
+  "author": "Marcel Klehr <mklehr@gmx.net>",
+  "license": "LGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/marcelklehr/gulf-quill/issues"
+  },
+  "homepage": "https://github.com/marcelklehr/gulf-quill#readme"
+}
