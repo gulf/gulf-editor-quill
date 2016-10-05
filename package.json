@@ -27,7 +27,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/marcelklehr/gulf-editor-quill.git"
+    "url": "git+https://github.com/gulf/gulf-editor-quill.git"
   },
   "keywords": [
     "operational transformation",
@@ -40,7 +40,7 @@
   "author": "Marcel Klehr <mklehr@gmx.net>",
   "license": "LGPL-3.0",
   "bugs": {
-    "url": "https://github.com/marcelklehr/gulf-editor-quill/issues"
+    "url": "https://github.com/gulf/gulf-editor-quill/issues"
   },
-  "homepage": "https://github.com/marcelklehr/gulf-editor-quill#readme"
+  "homepage": "https://github.com/gulf/gulf-editor-quill#readme"
 }

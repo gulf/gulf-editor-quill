@@ -1,5 +1,5 @@
 # gulf-editor-quill
-[Gulf](http://github.com/marcelklehr/gulf#readme) bindings for [quill](http://quilljs.com)
+[Gulf](http://github.com/gulf/gulf#readme) bindings for [quill](http://quilljs.com)
 
  * Compatible with quill v1.x (0.20 still works, too).
  * Compatible with gulf v5 only! (For gulf v4, checkout `gulf-quill` package on npm)
@@ -28,7 +28,7 @@ masterStream.pipe(doc.masterLink()).pipe(masterStream)
 ## API
 ### class: QuillDocument({editorInstance:QuillInstance, ...}) extends gulf.EditableDocument
   * `editorInstance` -- a quill instance to be wired up with gulf
-  * `storageAdapter` -- a gulf storage adapter (optional; defaults to the in-memory Adapter)
+  * `storageAdapter` -- a gulf storage adapter
   * `ottype` -- the OT type to use, most probably you'll want to pass the `rich-text` type here (as shown above)
 
 ## Legal
