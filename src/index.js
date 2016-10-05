@@ -1,6 +1,6 @@
 /**
- * gulf-quill
- * Copyright (C) 2015 Marcel Klehr <mklehr@gmx.net>
+ * gulf-editor-quill
+ * Copyright (C) 2015-2016 Marcel Klehr <mklehr@gmx.net>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License as published by
@@ -18,22 +18,30 @@
 var gulf = require('gulf')
   , richtextOT = require('rich-text')
 
-module.exports = function(quill, storageAdapter) {
-  var doc = new gulf.EditableDocument(storageAdapter || new gulf.MemoryAdapter, richtextOT.type)
-  doc.quill = quill
-  doc._setContents = function(contents, cb) {
+class QuillDocument extends gulf.EditableDocument {
+  constructor(opts) {
+    super(opts)
+    if (!opts.editorInstance) throw new Error('No Quill instance was passed')
+    this.quill = opts.editorInstance
+  
+    quill.on('text-change', (changes, source) => {
+      if (source !== 'user') return
+      this.submitChange(changes)
+    })
+  }
+ 
+  _setContent(contents) {
     quill.setContents(contents)
-    cb()
+    return Promise.resolve()
   }
-  doc._change = function(changes, cb) {
+  
+  _onChange(changes) {
     quill.updateContents(changes)
-    cb()
+    return Promise.resolve()
   }
-  doc._collectChanges = function(cb){cb()}
+  
+  _onBeforeChange() {
+    return Promise.resolve()
+  }
 
-  quill.on('text-change', function(changes, source) {
-    if (source !== 'user') return
-    doc.update(changes)
-  })
-  return doc
 }
