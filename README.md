@@ -7,7 +7,7 @@
 ## Install
 
 ```
-npm install --save gulf gulf-editor-quill rich-text
+npm install --save gulf-editor-quill
 ```
 
 ## Usage

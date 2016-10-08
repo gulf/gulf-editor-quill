@@ -4,9 +4,7 @@
   "description": "Convenient gulf bindings for quillJS (using shareaJS's rich text OT type)",
   "dependencies": {
     "babel-runtime": "^6.11.6",
-    "core-js": "2.x"
-  },
-  "peerDependencies": {
+    "core-js": "2.x",
     "gulf": "5.x",
     "rich-text": "3.x"
   },
