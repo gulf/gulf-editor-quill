@@ -20,6 +20,7 @@ var gulf = require('gulf')
 
 class QuillDocument extends gulf.EditableDocument {
   constructor(opts) {
+    opts.ottype = opts.ottype || richtextOT
     super(opts)
     if (!opts.editorInstance) throw new Error('No Quill instance was passed')
     this.quill = opts.editorInstance

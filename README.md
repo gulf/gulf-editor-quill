@@ -14,12 +14,9 @@ npm install --save gulf-editor-quill
 
 ```js
 const QuillDocument = require('gulf-editor-quill')
-const richtextOT = require('rich-text').type
 
 var doc = new QuillDocument({
-  storageAdapter: new gulf.MemoryAdapter
-, ottype: richtextOT
-, editorInstance: quill
+  editorInstance: quill
 })
 
 masterStream.pipe(doc.masterLink()).pipe(masterStream)
@@ -28,8 +25,8 @@ masterStream.pipe(doc.masterLink()).pipe(masterStream)
 ## API
 ### class: QuillDocument({editorInstance:QuillInstance, ...}) extends gulf.EditableDocument
   * `editorInstance` -- a quill instance to be wired up with gulf
-  * `storageAdapter` -- a gulf storage adapter
-  * `ottype` -- the OT type to use, most probably you'll want to pass the `rich-text` type here (as shown above)
+  * `storageAdapter` -- (optional) a gulf storage adapter. Default is `gulf.MemoryAdapter`
+  * `ottype` -- the OT type to use. Default is `rich-text`
 
 ## Legal
 (c) 2015 by Marcel Klehr
